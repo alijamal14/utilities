@@ -118,4 +118,8 @@
         }
 
     }
+    static IsNotUndefinedOrNull(Value) {
+        return !(this.IsUndefinedOrNull(Value))
+
+    }
 }
