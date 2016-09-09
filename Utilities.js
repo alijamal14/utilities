@@ -18,6 +18,11 @@
             if (objectExcludedFieldsSelectors != undefined && (objectExcludedFieldsSelectors.indexOf($(this).attr('name')) > -1)) {
                 return true
             }
+            else if($('[name="'+$(this).attr('name')+'"]').length>1){
+                if ($('[name="'+$(this).attr('name')+'"]').prop('tagName').toUpperCase()=="INPUT" && $('[name="'+$(this).attr('name')+'"]').prop('type').toUpperCase()=="RADIO") {
+                    Data[$(this).attr('name')] = $('[name="'+$(this).attr('name')+'"]:checked').val()
+                }
+            }
             else {
                 Data[$(this).attr('name')] = $(this).val()
             }
@@ -90,7 +95,7 @@
         ///console.log(CalculatedDaysMonthYears);
         return CalculatedDaysMonthYears
     }
-    static DateTimeReviver(value) {
+    static DateTimeReviver (value) {
         var a;
         if (typeof value === 'string') {
             a = /\/Date\((\d*)\)\//.exec(value);
@@ -116,10 +121,10 @@
         else {
             return true
         }
-
+       
     }
     static IsNotUndefinedOrNull(Value) {
         return !(this.IsUndefinedOrNull(Value))
-
+        
     }
 }
