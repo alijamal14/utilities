@@ -1,4 +1,21 @@
 ﻿function Utils() {
+    this.Isfunction = function (ObjectReceived) {
+        return typeof ObjectReceived === "function"
+    },
+    this.alphabetchk = function (event) {
+
+        var keycode = event.which;
+        if ((!(keycode == 0 || keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode === 16) || (keycode >= 65 && keycode <= 90) || (keycode == 32) || (keycode >= 97 && keycode <= 122)))) {
+            $(this).siblings('.err').text('Only alphabets are allowed')
+            $(this).siblings('.err').css('display', '')
+            event.preventDefault();
+        }
+        else {
+            $(this).siblings('.err').text('')
+            $(this).siblings('.err').css('display', 'none')
+        }
+
+    },
     this.isEven = function (n) {
         return n % 2 == 0;
     },
@@ -7,7 +24,7 @@
     },
     this.DateTimeClock = function (Selector) {
 
-
+        
         setInterval(function () {
             if (Utilities.isEven(moment().format("ss"))) {
 
@@ -147,4 +164,6 @@
     }
 }
 var Utilities = new Utils()
+
+
 Utilities.DateTimeClock('.CurrentDateTimeAccount')
