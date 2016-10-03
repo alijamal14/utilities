@@ -2,7 +2,7 @@
     this.Isfunction = function (ObjectReceived) {
         return typeof ObjectReceived === "function"
     },
-    this.alphabetchk = function (event) {
+    this.AlphabetOnly = function (event) {
 
         var keycode = event.which;
         if ((!(keycode == 0 || keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode === 16) || (keycode >= 65 && keycode <= 90) || (keycode == 32) || (keycode >= 97 && keycode <= 122)))) {
@@ -16,17 +16,17 @@
         }
 
     },
-    this.isEven = function (n) {
+    this.IsEven = function (n) {
         return n % 2 == 0;
     },
-    this.isOdd = function (n) {
+    this.IsOdd = function (n) {
         return Math.abs(n % 2) == 1;
     },
     this.DateTimeClock = function (Selector) {
 
         
         setInterval(function () {
-            if (Utilities.isEven(moment().format("ss"))) {
+            if (Utilities.IsEven(moment().format("ss"))) {
 
                 $(Selector).text(moment().format("dddd DD MMMM YYYY hh mm A "))
             }
@@ -38,7 +38,7 @@
 
         }, 1000)
     },
-    this.getModalDataObject = function (parentSelectorName, objectExcludedFieldsSelectors) {
+    this.GetModalDataObject = function (parentSelectorName, objectExcludedFieldsSelectors) {
         if (parentSelectorName == undefined || parentSelectorName == null || parentSelectorName == '') {
             parentSelectorName = '.modal-dialog';
         }
