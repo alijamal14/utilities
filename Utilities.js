@@ -1862,6 +1862,6 @@ $(document).ready(function () {
 	var Utilities = new Utils()
 
 
-	Utilities.DateTimeClock('.CurrentDateTimeAccount')
+	//Utilities.DateTimeClock('.CurrentDateTimeAccount')
 
 /// Thank You
