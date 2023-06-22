@@ -1,6 +1,8 @@
 Salaamun Alekum
 
 # Utilities
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falijamal14%2FUtilities.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Falijamal14%2FUtilities?ref=badge_shield)
+
 # Version 12
 * Major Changes To Structure Of Code
 * Added Object 'Enumerators'
@@ -116,3 +118,7 @@ Thank You
 
 Thank You
 Welcome to the Utilities wiki!
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falijamal14%2FUtilities.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Falijamal14%2FUtilities?ref=badge_large)
